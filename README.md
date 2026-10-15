@@ -1,7 +1,7 @@
 # wordpress_jwt_auth
 
 [![pub package](https://img.shields.io/pub/v/wordpress_jwt_auth.svg)](https://pub.dev/packages/wordpress_jwt_auth)
-[![CI](https://github.com/nurullahturkoglu/flutter-jwt-auth-for-wordpress/actions/workflows/ci.yml/badge.svg)](https://github.com/nurullahturkoglu/flutter-jwt-auth-for-wordpress/actions/workflows/ci.yml)
+[![CI](https://github.com/nurullahturkoglu/wordpress_jwt_auth/actions/workflows/ci.yml/badge.svg)](https://github.com/nurullahturkoglu/wordpress_jwt_auth/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 A Dart client for the [JWT Authentication for WP REST API](https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/) WordPress plugin. It logs users in, validates stored tokens, loads the current user and turns the plugin's error responses into typed Dart exceptions. The `example/` folder contains a Flutter app with login, registration and protected pages.
@@ -192,8 +192,8 @@ final result = await auth.register(
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/nurullahturkoglu/flutter-jwt-auth-for-wordpress.git
-   cd flutter-jwt-auth-for-wordpress/example
+   git clone https://github.com/nurullahturkoglu/wordpress_jwt_auth.git
+   cd wordpress_jwt_auth/example
    ```
 
 2. Install dependencies:

@@ -1,8 +1,8 @@
 name: wordpress_jwt_auth
 description: Dart client for the JWT Authentication for WP REST API WordPress plugin. Login, token validation, typed errors and pluggable token storage.
 version: 1.0.0
-repository: https://github.com/nurullahturkoglu/flutter-jwt-auth-for-wordpress
-issue_tracker: https://github.com/nurullahturkoglu/flutter-jwt-auth-for-wordpress/issues
+repository: https://github.com/nurullahturkoglu/wordpress_jwt_auth
+issue_tracker: https://github.com/nurullahturkoglu/wordpress_jwt_auth/issues
 topics:
   - wordpress
   - jwt

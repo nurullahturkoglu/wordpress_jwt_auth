@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: JWT Auth Register Endpoint
- * Plugin URI:  https://github.com/nurullahturkoglu/flutter-jwt-auth-for-wordpress
+ * Plugin URI:  https://github.com/nurullahturkoglu/wordpress_jwt_auth
  * Description: Adds POST /wp-json/jwt-auth/v1/register next to the endpoints of "JWT Authentication for WP REST API". Honours the "Anyone can register" setting.
  * Version:     1.0.0
  * Requires PHP: 7.4
