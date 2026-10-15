@@ -1,0 +1,38 @@
+name: Bug report
+description: Something in the package or the example app does not work as documented.
+labels: [bug]
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Package version, Dart or Flutter version, and the WordPress plugin version.
+      placeholder: wordpress_jwt_auth 1.0.0, Flutter 3.47.6, JWT Authentication for WP REST API 1.5.0
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A short code sample or the sequence of calls that triggers the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: Include the exception type and message, or the raw JSON the server returned if you have it.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: true
+      options: [Android, iOS, Web, macOS, Windows, Linux, Dart VM]
