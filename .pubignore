@@ -55,3 +55,5 @@ example/ios/
 example/test/
 example/.metadata
 example/analysis_options.yaml
+CODE_OF_CONDUCT.md
+SECURITY.md

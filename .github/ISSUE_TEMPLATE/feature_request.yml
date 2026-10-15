@@ -1,0 +1,21 @@
+name: Feature request
+description: Suggest a change to the package API or the example app.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do that the package makes hard or impossible today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: The API or behaviour you have in mind, if any.
+  - type: textarea
+    id: plugin
+    attributes:
+      label: Plugin side
+      description: Does this need a change or a paid feature in the WordPress plugin? Note that the free plugin has no refresh or revoke endpoint.
