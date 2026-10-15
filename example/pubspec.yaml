@@ -1,0 +1,23 @@
+name: wordpress_jwt_auth_example
+description: Example app for the wordpress_jwt_auth package. Login, registration and protected pages against a WordPress site.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: ^11.2.0
+  wordpress_jwt_auth:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  dio: ^5.11.1
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

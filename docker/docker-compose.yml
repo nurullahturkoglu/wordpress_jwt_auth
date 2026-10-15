@@ -1,0 +1,54 @@
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: wordpress
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  wordpress:
+    image: wordpress:6.9
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_CONFIG_EXTRA: |
+        define('JWT_AUTH_SECRET_KEY', 'local-development-secret-change-me');
+        define('JWT_AUTH_CORS_ENABLE', true);
+    volumes:
+      - wordpress:/var/www/html
+      - ../wordpress/jwt-auth-register.php:/var/www/html/wp-content/plugins/jwt-auth-register/jwt-auth-register.php:ro
+
+  cli:
+    image: wordpress:cli-2.12-php8.3
+    user: "33:33"
+    depends_on:
+      wordpress:
+        condition: service_started
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    volumes:
+      - wordpress:/var/www/html
+      - ../wordpress/jwt-auth-register.php:/var/www/html/wp-content/plugins/jwt-auth-register/jwt-auth-register.php:ro
+    profiles: ["cli"]
+
+volumes:
+  db:
+  wordpress:
