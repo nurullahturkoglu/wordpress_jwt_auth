@@ -8,7 +8,7 @@ Only the latest release on pub.dev receives fixes.
 
 Please do not open a public issue for security problems. Use the private
 "Report a vulnerability" form under the Security tab of this repository, or
-email info@solorota.com. You will get a reply within a week.
+email info@scriptyuvasi.com. You will get a reply within a week.
 
 Problems in the WordPress plugin itself (token signing, validation, CORS)
 should go to the plugin authors at https://github.com/Tmeister/wp-api-jwt-auth.
